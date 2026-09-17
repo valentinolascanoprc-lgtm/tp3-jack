@@ -1,0 +1,210 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Rubik', sans-serif;
+	background-color: #000000;
+	color: #ffffff;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 40px;
+	background-color: #000000;
+	border-top: 15px solid #800000;
+	position: relative;
+}
+
+header div img {
+	height: 65px;
+	object-fit: contain;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	gap: 25px;
+	align-items: center;
+}
+
+nav ul li {
+	display: inline-block;
+}
+
+nav ul li a {
+	color: #ffffff;
+	font-family: 'Creepster', cursive;
+	font-size: 16px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+nav ul li a:hover {
+	color: #d62828;
+}
+
+.menu-rojo i {
+	color: #d62828;
+	font-size: 22px;
+}
+
+.icon {
+	display: none;
+	color: #d62828;
+	font-size: 24px;
+}
+
+section {
+	position: relative;
+	width: 100%;
+	background-color: #000000;
+}
+
+.principal {
+	width: 100%;
+}
+
+.principal div img {
+	width: 100%;
+	height: 60vh;
+	max-height: 550px;
+	object-fit: cover;
+	object-position: center;
+	display: block;
+}
+
+.secundario {
+	text-align: center;
+	background-color: transparent;
+	margin-top: -140px; /* Sube los personajes sobre el fondo principal */
+	position: relative;
+	z-index: 10;
+	padding-bottom: 40px;
+}
+
+.secundario h4 {
+	color: #ffffff;
+	font-family: 'Creepster', cursive;
+	font-size: 24px;
+	letter-spacing: 3px;
+	margin-bottom: 15px;
+	font-weight: normal;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.carrusel-contenedor {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.flecha {
+	font-size: 32px;
+	color: #ffffff;
+	cursor: pointer;
+	padding: 0 10px;
+	text-shadow: 2px 2px 5px #000;
+}
+
+.flecha:hover {
+	color: #d62828;
+}
+
+.tarjeta {
+	width: 180px;
+	height: 105px;
+	border-radius: 2px;
+	overflow: hidden;
+	border: 3px solid transparent;
+	box-shadow: 0px 4px 12px rgba(0,0,0,0.9);
+}
+
+.tarjeta.activo {
+	border: 3.5px solid #ff0000;
+	transform: scale(1.03);
+}
+
+.tarjeta a {
+	display: block;
+	height: 100%;
+}
+
+.tarjeta a img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	background-color: #000000;
+	border-bottom: 15px solid #800000;
+}
+
+.redes {
+	color: #ffffff;
+	font-size: 13px;
+	font-family: 'Rubik', sans-serif;
+	letter-spacing: 1px;
+}
+
+.redes i {
+	font-size: 18px;
+	margin-left: 15px;
+	cursor: pointer;
+}
+
+.redes i:hover {
+	color: #d62828;
+}
+
+/* Modo para teléfonos */
+@media (max-width: 768px) { 
+	header {
+		padding: 15px 20px;
+	}
+
+	.icon {
+		display: block;
+		position: absolute;
+		right: 20px;
+		top: 25px;
+	}
+
+	nav ul {
+		display: none;
+		flex-direction: column;
+		width: 100%;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background-color: #000000;
+		padding: 15px 0;
+		z-index: 100;
+		border-bottom: 2px solid #800000;
+	}
+
+	#menu_bar.responsive ul {
+		display: flex;
+	}
+
+	.carrusel-contenedor {
+		flex-wrap: wrap;
+	}
+	
+	.tarjeta:not(.activo) {
+		display: none; 
+	}
+}

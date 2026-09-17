@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="estilo.css">
+    <title>El Extraño Mundo de Jack</title>
+</head>
+<body>
+    <header>
+        <div>
+            <!-- Asegúrate de tener logo.png en tu carpeta -->
+            <img src="logo.png.png" alt="Logo El Extraño Mundo de Jack">
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+        <nav id="menu_bar" class="barratop">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="galeria.html">GALERÍA</a></li>
+                <li><a href="historia.html">HISTORIA</a></li>
+                <li><a href="mundos.html">MUNDOS</a></li>
+                <li><a href="musica.html">MÚSICA</a></li>
+                <li><a href="curiosidades.html">CURIOSIDADES</a></li>
+                <li><a href="#" class="menu-rojo"><i class="fa fa-bars"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <article class="principal">
+            <div>
+                <!-- Asegúrate de tener fondo.png en tu carpeta -->
+                <img src="fondo.png.png" alt="Jack Skellington en Spiral Hill">
+            </div>
+        </article>
+        
+        <article class="secundario">
+            <h4>PERSONAJES</h4>
+            <div class="carrusel-contenedor">
+                <span class="flecha"><i class="fa fa-arrow-left"></i></span>
+                
+                <div class="tarjeta">
+                    <a href="#">
+                        <img src="jack.png.png" alt="Jack Skellington">
+                    </a>
+                </div>
+                
+                <div class="tarjeta activo">
+                    <a href="#">
+                        <img src="oogie.png.png" alt="Oogie Boogie">
+                    </a>
+                </div>
+                
+                <div class="tarjeta">
+                    <a href="#">
+                        <img src="sally.png.png" alt="Sally">
+                    </a>
+                </div>
+                
+                <span class="flecha"><i class="fa fa-arrow-right"></i></span>
+            </div>
+        </article>
+    </section>
+    
+    <footer>
+        <div class="redes">
+            <i class="fa fa-facebook-square"></i> Facebook 
+            <i class="fa fa-twitter"></i> Twitter 
+            <i class="fa fa-youtube-play"></i> Youtube 
+            <i class="fa fa-instagram"></i> Instagram 
+            <span>© Disney / Touchstone Pictures.</span>
+        </div>
+    </footer>
+    
+    <script type="text/javascript">
+        function myFunction() {
+          var x = document.getElementById("menu_bar");
+          if (x.className === "barratop") {
+            x.className += " responsive";
+          } else {
+            x.className = "barratop";
+          }
+        }
+    </script>
+</body>
+</html>
